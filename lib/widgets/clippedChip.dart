@@ -21,7 +21,7 @@ class ClippedChip extends StatelessWidget {
               Chip(label: CircleAvatar(foregroundImage: AssetImage("assets/ast11.png"),),),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Chip(label: Row(
+                child: Chip(label: FriendsProfiles.length>1?Row(
                   children: [
                     ...FriendsProfiles.map((e) => Padding(
                       padding: const EdgeInsets.all(2.0),
@@ -30,7 +30,10 @@ class ClippedChip extends StatelessWidget {
                         foregroundImage: AssetImage(e),),
                     ))
                   ],
-                ),),
+                ): CircleAvatar(backgroundColor: Color(0xffdcdcdc),
+                  radius: 20,
+                  child: Icon(Icons.close,color: Colors.red,),
+                  ) ,),
               ),
             ],
           ),
