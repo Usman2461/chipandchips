@@ -17,7 +17,11 @@ class MainScreen extends StatelessWidget {
             FriendsProfiles: ["assets/ast11.png",
               "assets/images22.png",
               "assets/astrono.png",
-            "assets/images22.png"], userProfile: '',)
+            "assets/images22.png"], userProfile: '', trayColor: [
+            Color(0xffdcdcdc),
+            Color(0xffdcdcdc),
+            Color(0xffdcdcdc)
+          ],)
 
         ],),
       ),
