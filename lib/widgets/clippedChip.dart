@@ -24,11 +24,7 @@ class ClippedChip extends StatelessWidget {
         return RadialGradient(
           center: Alignment.topLeft,
           radius: 1.0,
-          colors: <Color>[
-            Color(0xffdcdcdc),
-            Color(0xffdcdcdc),
-            Color(0xffdcdcdc)
-          ],
+          colors: trayColor,
           tileMode: TileMode.mirror,
         ).createShader(bounds);
       },
