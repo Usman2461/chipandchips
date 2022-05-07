@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ClippedChip extends StatelessWidget {
   String userProfile;
@@ -34,18 +35,19 @@ class ClippedChip extends StatelessWidget {
           alignment: Alignment.center,
           children: [
             Positioned(
-                left: 50,
-                child: Image(
-                  height: 40,
-                  image: AssetImage("assets/connector.png"),
-                  fit: BoxFit.scaleDown,
-                )),
+                left: 47,
+                child: SvgPicture.asset(
+                    "assets/connector.svg",
+                    height: 45,
+                    semanticsLabel: 'Acme Logo'
+                ),),
             Row(
               children: [
-                CircleAvatar(
-                  radius: 28.0,
+                Chip(
+                  shape: CircleBorder(),
+                  labelPadding: EdgeInsets.all(3.0),
                   backgroundColor: Color(0xffdcdcdc),
-                  child: CircleAvatar(
+                  label: CircleAvatar(
                     foregroundImage: AssetImage("assets/ast11.png"),
                   ),
                 ),
