@@ -13,8 +13,13 @@ class MainScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(children: [
-
-          ClippedChip(FriendsProfiles: ["assets/ast11.png","assets/images22.png","assets/astrono.png", "stock123.png"], userProfile: '',)
+          ClippedChip(
+            FriendsProfiles: ["assets/ast11.png",
+              "assets/images22.png",
+              "assets/astrono.png",
+              "assets/astrono.png",
+              "assets/astrono.png",
+            "assets/images22.png"], userProfile: '',)
 
         ],),
       ),
