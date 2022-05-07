@@ -8,7 +8,7 @@ class ClippedChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return        Container(
+    return        SizedBox(
       height: 90.0,
       width: FriendsProfiles.length<2?160:FriendsProfiles.length*80,
       child: ClipPath(
@@ -16,10 +16,13 @@ class ClippedChip extends StatelessWidget {
         child: Chip(label: Row(
           children: [
             CircleAvatar(radius: 20.0, child: Icon(Icons.star, color: Colors.white,),),
-            SizedBox(width: 80,),
-            ...FriendsProfiles.map((e) => CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage(e), child: Image(image: AssetImage(e),),))
+            SizedBox(width: 70,),
+            ...FriendsProfiles.map((e) => Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: CircleAvatar(
+                radius: 20,
+                foregroundImage: AssetImage(e),),
+            ))
           ],
         ),),
       ),
