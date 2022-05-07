@@ -38,7 +38,7 @@ class ClippedChip extends StatelessWidget {
           alignment: Alignment.center,
           children: [
             Positioned(
-                left: 56,
+                left: 50,
                 child: Image(
                   height: 40,
                   image: AssetImage("assets/connector.png"),
@@ -46,8 +46,10 @@ class ClippedChip extends StatelessWidget {
                 )),
             Row(
               children: [
-                Chip(
-                  label: CircleAvatar(
+                CircleAvatar(
+                  radius: 28.0,
+                  backgroundColor: Color(0xffdcdcdc),
+                  child: CircleAvatar(
                     foregroundImage: AssetImage("assets/ast11.png"),
                   ),
                 ),
